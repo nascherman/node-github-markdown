@@ -28,15 +28,21 @@
   "license": "MIT",
   "dependencies": {
     "async": "^1.5.2",
+    "commonmark": "^0.24.0",
+    "commonmark-react-renderer": "https://github.com/rexxars/commonmark-react-renderer.git",
     "highlight.js": "^9.2.0",
     "is-md": "^1.0.0",
     "jade": "^1.11.0",
-    "listy": "^2.0.1",
+    "listy": "^2.0.2",
     "markdown-it": "^6.0.0",
     "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
     "path-is-absolute": "^1.0.0",
     "primer-css": "^3.0.0",
-    "primer-markdown": "^2.5.1"
+    "primer-markdown": "^2.5.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-markdown": "^2.3.0"
   },
   "devDependencies": {
     "espower-loader": "^1.0.0",

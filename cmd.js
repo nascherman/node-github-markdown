@@ -9,6 +9,7 @@ const listy = require('listy');
 const isMarkdown = require('is-md');
 const async = require('async');
 const GitHubMarkdown = require('./');
+const mkdirp = require('mkdirp');
 
 let argv = minimist(process.argv.slice(2), {
   alias: {
@@ -40,19 +41,14 @@ async.each(markdowns, (file, index, files) => {
   };
 
   let dest;
-  let filename = path.basename(file, '.md') + '.html';
-  if (argv.dest) {
-    dest = path.join(path.dirname(argv.dest), filename);
-  } else {
-    dest = path.join(process.cwd(), filename);
-  }
+  let filename = path.basename(file, '.md') + '.jsx';
 
   let ghmd = new GitHubMarkdown(config);
   ghmd.render().then(function (html) {
-    fs.writeFileSync(dest, html, {
-      encoding: 'utf8',
-      flag: 'w'
-    });
+    let outPath = __dirname + '/' + config.title; 
+    mkdirp.sync(outPath)
+    fs.createReadStream('styleTemplate.css').pipe(fs.createWriteStream(outPath + '/style.css'));
+    fs.writeFileSync(outPath + '/' + filename, html, {encoding: 'utf8', flag: 'w'});
   });
 
 }, (error, result) => {
