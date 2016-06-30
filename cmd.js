@@ -10,6 +10,7 @@ const isMarkdown = require('is-md');
 const async = require('async');
 const GitHubMarkdown = require('./');
 const mkdirp = require('mkdirp');
+const css = require('./lib/styleTemplate')
 
 let argv = minimist(process.argv.slice(2), {
   alias: {
@@ -45,9 +46,9 @@ async.each(markdowns, (file, index, files) => {
 
   let ghmd = new GitHubMarkdown(config);
   ghmd.render().then(function (html) {
-    let outPath = __dirname + '/' + config.title; 
+    let outPath = process.cwd() + '/' + config.title; 
     mkdirp.sync(outPath)
-    fs.createReadStream('styleTemplate.css').pipe(fs.createWriteStream(outPath + '/style.css'));
+    fs.writeFileSync(outPath + '/style.css', css, {encoding: 'utf8', flag: 'w'});
     fs.writeFileSync(outPath + '/' + filename, html, {encoding: 'utf8', flag: 'w'});
   });
 

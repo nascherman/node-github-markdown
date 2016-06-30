@@ -1,10 +1,10 @@
 {
-  "name": "github-markdown",
-  "version": "2.2.0",
-  "description": "Parse GitHub flavored markdown to html.",
+  "name": "github-markdown-react-component",
+  "version": "1.0.1",
+  "description": "Parse GitHub flavored markdown to react component.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:1000ch/node-github-markdown.git"
+    "url": "git@github.com:nascherman/node-github-markdown.git"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -13,17 +13,17 @@
     "test": "mocha --require intelli-espower-loader --timeout=50000 --reporter=spec test/test.js"
   },
   "bin": {
-    "ghmd": "cmd.js",
-    "github-markdown": "cmd.js"
+    "ghmd-react": "cmd.js",
+    "github-markdown-react": "cmd.js"
   },
   "keywords": [
     "markdown",
     "GitHub"
   ],
   "author": {
-    "name": "1000ch",
-    "email": "shogo.sensui@gmail.com",
-    "web": "http://github.com/1000ch"
+    "name": "nascherman",
+    "email": "n_scherman@hotmail.com",
+    "web": "http://github.com/nascherman"
   },
   "license": "MIT",
   "dependencies": {
@@ -32,11 +32,11 @@
     "commonmark-react-renderer": "https://github.com/rexxars/commonmark-react-renderer.git",
     "highlight.js": "^9.2.0",
     "is-md": "^1.0.0",
-    "jade": "^1.11.0",
     "listy": "^2.0.2",
     "markdown-it": "^6.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
+    "npm-css": "^0.2.3",
     "path-is-absolute": "^1.0.0",
     "primer-css": "^3.0.0",
     "primer-markdown": "^2.5.1",
