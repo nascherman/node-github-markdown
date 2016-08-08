@@ -76,13 +76,6 @@ import styles from './style.css';
 import React, { Component } from 'react';
 
 class ${this.title} extends Component {
-    // put your props and lifecycle hooks below
-    static propTypes = {
-    }
-
-    componentWillReceiveProps(nextProps) {
-    }
-
     render() {
       return (
         <div className={styles.container} ref='wiki'>

@@ -1,6 +1,6 @@
 {
   "name": "github-markdown-react-component",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Parse GitHub flavored markdown to react component.",
   "repository": {
     "type": "git",
@@ -30,14 +30,13 @@
     "async": "^1.5.2",
     "commonmark": "^0.24.0",
     "commonmark-react-renderer": "https://github.com/rexxars/commonmark-react-renderer.git",
+    "fs-extra": "^0.30.0",
     "highlight.js": "^9.2.0",
     "is-md": "^1.0.0",
     "listy": "^2.0.2",
     "markdown-it": "^6.0.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "npm-css": "^0.2.3",
-    "path-is-absolute": "^1.0.0",
     "primer-css": "^3.0.0",
     "primer-markdown": "^2.5.1",
     "react": "^15.1.0",

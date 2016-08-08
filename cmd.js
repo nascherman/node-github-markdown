@@ -2,7 +2,7 @@
 
 'use strict';
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 const minimist = require('minimist');
 const listy = require('listy');
@@ -50,6 +50,7 @@ async.each(markdowns, (file, index, files) => {
     mkdirp.sync(outPath)
     fs.writeFileSync(outPath + '/style.css', css, {encoding: 'utf8', flag: 'w'});
     fs.writeFileSync(outPath + '/' + filename, html, {encoding: 'utf8', flag: 'w'});
+    fs.copySync('./RobotoCondensed-Regular.ttf', outPath + '/RobotoCondensed-Regular.ttf');
   });
 
 }, (error, result) => {
